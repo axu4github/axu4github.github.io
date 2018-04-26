@@ -128,20 +128,27 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="精于心，简于形">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Spark RPC 核心逻辑架构  Spark RPC 的核心逻辑架构有部分组成，分别是：RpcEnv，RpcEndpointRef 和 RpcEndpoint。  RpcEnv：RpcEndpoint 和 RpcEndpointRef 的对应关系 RpcEndpointRef：发送消息 RpcEndpoint：接受并处理消息  核心逻辑架构图  RpcEndpointRef 发送消息 RpcEn">
+<meta name="keywords" content="spark-internal">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spark RPC">
+<meta property="og:url" content="http://yoursite.com/2018/04/25/SparkRPCLocal/index.html">
 <meta property="og:site_name" content="精于心，简于形">
+<meta property="og:description" content="Spark RPC 核心逻辑架构  Spark RPC 的核心逻辑架构有部分组成，分别是：RpcEnv，RpcEndpointRef 和 RpcEndpoint。  RpcEnv：RpcEndpoint 和 RpcEndpointRef 的对应关系 RpcEndpointRef：发送消息 RpcEndpoint：接受并处理消息  核心逻辑架构图  RpcEndpointRef 发送消息 RpcEn">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/images/markdown-img-paste-20180426235917141.png">
+<meta property="og:updated_time" content="2018-04-26T16:34:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="精于心，简于形">
+<meta name="twitter:title" content="Spark RPC">
+<meta name="twitter:description" content="Spark RPC 核心逻辑架构  Spark RPC 的核心逻辑架构有部分组成，分别是：RpcEnv，RpcEndpointRef 和 RpcEndpoint。  RpcEnv：RpcEndpoint 和 RpcEndpointRef 的对应关系 RpcEndpointRef：发送消息 RpcEndpoint：接受并处理消息  核心逻辑架构图  RpcEndpointRef 发送消息 RpcEn">
+<meta name="twitter:image" content="http://yoursite.com/images/markdown-img-paste-20180426235917141.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/25/SparkRPCLocal/"/>
 
 
 
@@ -151,7 +158,7 @@
   };
 </script>
 
-  <title>精于心，简于形</title>
+  <title>Spark RPC | 精于心，简于形</title>
   
 
 
@@ -198,8 +205,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -239,7 +245,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
   </li>
@@ -283,9 +289,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -317,11 +323,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/25/SparkRPCLocal/" itemprop="url">
-                  Spark RPC
-                </a>
+          <h1 class="post-title" itemprop="name headline">Spark RPC
               
             
           </h1>
@@ -396,9 +398,7 @@
       
 
       
-        
-          
-            <h1 id="Spark-RPC-核心逻辑架构"><a href="#Spark-RPC-核心逻辑架构" class="headerlink" title="Spark RPC 核心逻辑架构"></a>Spark RPC 核心逻辑架构</h1><p>  Spark RPC 的核心逻辑架构有部分组成，分别是：<code>RpcEnv</code>，<code>RpcEndpointRef</code> 和 <code>RpcEndpoint</code>。</p>
+        <h1 id="Spark-RPC-核心逻辑架构"><a href="#Spark-RPC-核心逻辑架构" class="headerlink" title="Spark RPC 核心逻辑架构"></a>Spark RPC 核心逻辑架构</h1><p>  Spark RPC 的核心逻辑架构有部分组成，分别是：<code>RpcEnv</code>，<code>RpcEndpointRef</code> 和 <code>RpcEndpoint</code>。</p>
 <ul>
 <li>RpcEnv：RpcEndpoint 和 RpcEndpointRef 的对应关系</li>
 <li>RpcEndpointRef：发送消息</li>
@@ -416,8 +416,6 @@
 <h1 id="Spark-RPC-核心逻辑架构实现"><a href="#Spark-RPC-核心逻辑架构实现" class="headerlink" title="Spark RPC 核心逻辑架构实现"></a>Spark RPC 核心逻辑架构实现</h1><p>（未完待续）</p>
 <p><code>-EOF-</code></p>
 
-          
-        
       
     </div>
 
@@ -435,14 +433,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/spark-internal/" rel="tag"># spark-internal</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -452,14 +456,19 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -480,8 +489,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -539,6 +557,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spark-RPC-核心逻辑架构"><span class="nav-number">1.</span> <span class="nav-text">Spark RPC 核心逻辑架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#核心逻辑架构图"><span class="nav-number">1.1.</span> <span class="nav-text">核心逻辑架构图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RpcEndpointRef"><span class="nav-number">1.1.1.</span> <span class="nav-text">RpcEndpointRef</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RpcEnv"><span class="nav-number">1.1.2.</span> <span class="nav-text">RpcEnv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RpcEndpoint"><span class="nav-number">1.1.3.</span> <span class="nav-text">RpcEndpoint</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spark-RPC-核心逻辑架构实现"><span class="nav-number">2.</span> <span class="nav-text">Spark RPC 核心逻辑架构实现</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -673,6 +707,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
+
+
 
   
 
